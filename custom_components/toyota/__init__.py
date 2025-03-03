@@ -15,11 +15,11 @@ from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryAuthFailed, ConfigEntryNotReady
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
-from mytoyota import MyT
-from mytoyota.exceptions import ToyotaApiError, ToyotaInternalError, ToyotaLoginError
-from mytoyota.models.summary import Summary
-from mytoyota.models.vehicle import Vehicle
 from pydantic import ValidationError
+from pytoyoda import MyT
+from pytoyoda.exceptions import ToyotaApiError, ToyotaInternalError, ToyotaLoginError
+from pytoyoda.models.summary import Summary
+from pytoyoda.models.vehicle import Vehicle
 
 from .const import CONF_METRIC_VALUES, DOMAIN, PLATFORMS, STARTUP_MESSAGE
 

@@ -9,7 +9,7 @@ from homeassistant.helpers.update_coordinator import (
     CoordinatorEntity,
     DataUpdateCoordinator,
 )
-from mytoyota.models.vehicle import Vehicle
+from pytoyoda.models.vehicle import Vehicle
 
 from . import StatisticsData, VehicleData
 from .const import CONF_BRAND_MAPPING, DOMAIN

@@ -7,8 +7,8 @@ from homeassistant import config_entries
 from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
 from homeassistant.data_entry_flow import FlowResult
 from homeassistant.helpers import selector
-from mytoyota.client import MyT
-from mytoyota.exceptions import ToyotaInvalidUsernameError, ToyotaLoginError
+from pytoyoda.client import MyT
+from pytoyoda.exceptions import ToyotaInvalidUsernameError, ToyotaLoginError
 
 from .const import CONF_METRIC_VALUES, DOMAIN
 
