@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: "⤵️ Check out code from GitHub"
         uses: "actions/checkout@v4"
-      - name: "\U0001F680 Run Labeler"
+      - name: "🚀 Run Labeler"
         uses: "crazy-max/ghaction-github-labeler@v5"
         with:
           skip-delete: false
