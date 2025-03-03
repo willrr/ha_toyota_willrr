@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from typing import Optional, Union
 
-from mytoyota.models.endpoints.vehicle_guid import VehicleGuidModel
-from mytoyota.models.summary import Summary
+from pytoyoda.models.endpoints.vehicle_guid import VehicleGuidModel
+from pytoyoda.models.summary import Summary
 
 from .const import CONF_BRAND_MAPPING
 

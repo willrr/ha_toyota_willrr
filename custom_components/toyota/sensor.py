@@ -19,7 +19,7 @@ from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import StateType
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
-from mytoyota.models.vehicle import Vehicle
+from pytoyoda.models.vehicle import Vehicle
 
 from . import StatisticsData, VehicleData
 from .const import DOMAIN
