@@ -3,7 +3,7 @@ name: "Validate"
 
 on:
   push:
-    branches: ["master", "main"]
+    branches: ["main"]
   pull_request:
   schedule:
     - cron: "0 0 * * *"
@@ -27,4 +27,4 @@ jobs:
       - name: "⤵️ Check out code from GitHub"
         uses: "actions/checkout@v4"
       - name: "🏠 Hassfest validation"
-        uses: "home-assistant/actions/hassfest@master"
+        uses: "home-assistant/actions/hassfest@main"
