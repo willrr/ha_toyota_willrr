@@ -1,4 +1,5 @@
 """Sensor platform for Toyota integration."""
+
 from __future__ import annotations
 
 import logging
@@ -42,7 +43,9 @@ class ToyotaSensorEntityDescriptionMixin:
 
 
 @dataclass
-class ToyotaSensorEntityDescription(SensorEntityDescription, ToyotaSensorEntityDescriptionMixin):
+class ToyotaSensorEntityDescription(
+    SensorEntityDescription, ToyotaSensorEntityDescriptionMixin
+):
     """Describes a Toyota sensor entity."""
 
 
@@ -203,7 +206,9 @@ async def async_setup_entry(
     async_add_devices: AddEntitiesCallback,
 ) -> None:
     """Set up the sensor platform."""
-    coordinator: DataUpdateCoordinator[list[VehicleData]] = hass.data[DOMAIN][entry.entry_id]
+    coordinator: DataUpdateCoordinator[list[VehicleData]] = hass.data[DOMAIN][
+        entry.entry_id
+    ]
 
     sensors: list[Union[ToyotaSensor, ToyotaStatisticsSensor]] = []
     for index, _ in enumerate(coordinator.data):
@@ -222,8 +227,12 @@ async def async_setup_entry(
                 vehicle._vehicle_info.extended_capabilities.telemetry_capable,
                 ODOMETER_ENTITY_DESCRIPTION,
                 ToyotaSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 vehicle._vehicle_info.extended_capabilities.fuel_level_available,
@@ -236,8 +245,12 @@ async def async_setup_entry(
                 vehicle._vehicle_info.extended_capabilities.fuel_range_available,
                 FUEL_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
@@ -250,51 +263,79 @@ async def async_setup_entry(
                 vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
                 BATTERY_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
                 BATTERY_RANGE_AC_ENTITY_DESCRIPTION,
                 ToyotaSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable
                 and vehicle._vehicle_info.extended_capabilities.fuel_range_available,
                 TOTAL_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 True,  # TODO Unsure of the required capability
                 STATISTICS_ENTITY_DESCRIPTIONS_DAILY,
                 ToyotaStatisticsSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 True,  # TODO Unsure of the required capability
                 STATISTICS_ENTITY_DESCRIPTIONS_WEEKLY,
                 ToyotaStatisticsSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 True,  # TODO Unsure of the required capability
                 STATISTICS_ENTITY_DESCRIPTIONS_MONTHLY,
                 ToyotaStatisticsSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
             (
                 True,  # TODO Unsure of the required capability
                 STATISTICS_ENTITY_DESCRIPTIONS_YEARLY,
                 ToyotaStatisticsSensor,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
-                UnitOfLength.KILOMETERS if metric_values is True else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
+                UnitOfLength.KILOMETERS
+                if metric_values is True
+                else UnitOfLength.MILES,
             ),
         ]
 

@@ -1,6 +1,5 @@
 """Binary sensor platform for Toyota integration."""
 
-
 from __future__ import annotations
 
 from collections.abc import Callable
@@ -226,7 +225,9 @@ async def async_setup_entry(
     async_add_devices: AddEntitiesCallback,
 ) -> None:
     """Set up the binary sensor platform."""
-    coordinator: DataUpdateCoordinator[list[VehicleData]] = hass.data[DOMAIN][entry.entry_id]
+    coordinator: DataUpdateCoordinator[list[VehicleData]] = hass.data[DOMAIN][
+        entry.entry_id
+    ]
 
     binary_sensors: list[ToyotaBinarySensor] = []
     for index, _ in enumerate(coordinator.data):

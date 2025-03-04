@@ -1,4 +1,5 @@
 """Toyota integration."""
+
 from __future__ import annotations
 
 import asyncio
@@ -67,14 +68,18 @@ async def async_setup_entry(  # pylint: disable=too-many-statements
     except ToyotaLoginError as ex:
         raise ConfigEntryAuthFailed(ex) from ex
     except (httpx.ConnectTimeout, httpcore.ConnectTimeout) as ex:
-        raise ConfigEntryNotReady("Unable to connect to Toyota Connected Services") from ex
+        raise ConfigEntryNotReady(
+            "Unable to connect to Toyota Connected Services"
+        ) from ex
 
     async def async_get_vehicle_data() -> Optional[list[VehicleData]]:
         """Fetch vehicle data from Toyota API."""
         metric_values = entry.data[CONF_METRIC_VALUES]
 
         try:
-            vehicles = await asyncio.wait_for(client.get_vehicles(metric=metric_values), 15)
+            vehicles = await asyncio.wait_for(
+                client.get_vehicles(metric=metric_values), 15
+            )
             vehicle_informations: list[VehicleData] = []
             if vehicles is not None:
                 for vehicle in vehicles:
@@ -120,7 +125,8 @@ async def async_setup_entry(  # pylint: disable=too-many-statements
             httpx.ReadTimeout,
         ) as ex:
             raise UpdateFailed(
-                "Update canceled! Toyota's API was too slow to respond. Will try again later..."
+                "Update canceled! \n"
+                "Toyota's API was too slow to respond. Will try again later."
             ) from ex
         return None
 

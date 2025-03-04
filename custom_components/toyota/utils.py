@@ -1,4 +1,5 @@
 """Utilities for Toyota integration."""
+
 from __future__ import annotations
 
 from typing import Optional, Union
@@ -45,7 +46,9 @@ def format_vin_sensor_attributes(
         "Electrical_platform_code": vehicle_info.electrical_platform_code,
         "EV_vehicle": vehicle_info.ev_vehicle,
         "Features": {
-            key: value for key, value in vehicle_info.features.dict().items() if value is True
+            key: value
+            for key, value in vehicle_info.features.dict().items()
+            if value is True
         },
         "Extended_capabilities": {
             key: value
@@ -65,7 +68,9 @@ def format_statistics_attributes(
 ) -> dict[str, Optional[str]]:
     """Format and returns statistics attributes."""
     attr = {
-        "Average_speed": round(statistics.average_speed, 1) if statistics.average_speed else None,
+        "Average_speed": round(statistics.average_speed, 1)
+        if statistics.average_speed
+        else None,
         "Countries": statistics.countries or [],
         "Duration": str(statistics.duration) if statistics.duration else None,
     }
@@ -85,8 +90,12 @@ def format_statistics_attributes(
         or vehicle_info.extended_capabilities.econnect_vehicle_status_capable
     ):
         attr |= {
-            "EV_distance": round(statistics.ev_distance, 1) if statistics.ev_distance else None,
-            "EV_duration": str(statistics.ev_duration) if statistics.ev_duration else None,
+            "EV_distance": round(statistics.ev_distance, 1)
+            if statistics.ev_distance
+            else None,
+            "EV_duration": str(statistics.ev_duration)
+            if statistics.ev_duration
+            else None,
         }
 
     attr |= {

@@ -7,17 +7,14 @@ on:
 jobs:
   pre-commit:
     name: "Pre-commit"
-    strategy:
-      matrix:
-        python-version: [3.11]
     runs-on: "ubuntu-latest"
     steps:
       - name: "⤵️ Check out code from GitHub"
         uses: "actions/checkout@v4"
-      - name: "🐍 Set up Python ${{ matrix.python-version }}"
+      - name: "🐍 Set up Python"
         uses: "actions/setup-python@v5"
         with:
-          python-version: "${{ matrix.python-version }}"
+          python-version: "3.12"
       - name: "⚙️ Install Poetry"
         uses: "abatilo/actions-poetry@v4.0.0"
       - name: "⚙️ Install dependencies"
