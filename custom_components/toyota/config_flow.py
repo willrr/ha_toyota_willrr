@@ -1,4 +1,5 @@
 """Config flow for Toyota Connected Services integration."""
+
 import logging
 from typing import Any, Mapping
 
@@ -56,7 +57,9 @@ class ToyotaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 _LOGGER.error("An unknown error occurred during login request: %s", ex)
             else:
                 if not self._reauth_entry:
-                    return self.async_create_entry(title=user_input[CONF_EMAIL], data=user_input)
+                    return self.async_create_entry(
+                        title=user_input[CONF_EMAIL], data=user_input
+                    )
                 self.hass.config_entries.async_update_entry(
                     self._reauth_entry, data=user_input, unique_id=unique_id
                 )
@@ -82,7 +85,9 @@ class ToyotaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     async def async_step_reauth(self, entry_data: Mapping[str, Any]) -> FlowResult:
         """Perform reauth if the user credentials have changed."""
-        self._reauth_entry = self.hass.config_entries.async_get_entry(self.context["entry_id"])
+        self._reauth_entry = self.hass.config_entries.async_get_entry(
+            self.context["entry_id"]
+        )
         self._email = entry_data[CONF_EMAIL]
         self._metric_values = entry_data[CONF_METRIC_VALUES]
         return await self.async_step_user()
