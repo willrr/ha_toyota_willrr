@@ -1,17 +1,13 @@
-[project]
-name = "toyota"
-description = "Toyota Connected Services integration for Home Assistant"
-license = "MIT"
-version = "v2.0.3"
-authors = [{name = "DurgNomis-drol", email = "simongrud@gmail.com"}]
-requires-python = '>=3.12,<3.14'
-dynamic = ["dependencies"]
-
 [tool.poetry]
+name = "toyota"
+version = "v2.0.3"
+description = "Toyota Connected Services integration for Home Assistant"
+authors = ["DurgNomis-drol <simongrud@gmail.com>"]
+license = "MIT"
 package-mode = false
-requires-poetry = '>=2.0'
 
 [tool.poetry.dependencies]
+python = ">=3.12,<3.14"
 homeassistant = "^2025.0.0"
 pytoyoda = "^2.2"
 arrow = "^1.3"
