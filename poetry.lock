@@ -1457,21 +1457,22 @@ test = ["codespell (==2.3.0)", "mypy (==1.13.0)", "pre-commit (==4.0.1)", "pre-c
 
 [[package]]
 name = "hishel"
-version = "0.0.19"
+version = "0.1.1"
 description = "Persistent cache implementation for httpx and httpcore"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "hishel-0.0.19-py3-none-any.whl", hash = "sha256:4606e82c2e569d35bb3413837f2b52e174d26d1b13baa416e17e156eba61a3e6"},
-    {file = "hishel-0.0.19.tar.gz", hash = "sha256:a58f9ccfad8a61d84422c4fcf31f428621a3d33d1b1e545df69ad3b443f4094e"},
+    {file = "hishel-0.1.1-py3-none-any.whl", hash = "sha256:5b51acc340303faeef2f5cfc1658acb1db1fdc3e3ad76406265a485f9707c5d6"},
+    {file = "hishel-0.1.1.tar.gz", hash = "sha256:1f6421b78cc23fc43c610f651b7848c9b8eee2d29551d64a2ab0d45b319b6559"},
 ]
 
 [package.dependencies]
 httpx = ">=0.22.0"
 
 [package.extras]
-redis = ["redis (==5.0.0)"]
+redis = ["redis (==5.0.1)"]
+s3 = ["boto3 (>=1.15.0,<=1.15.3) ; python_version < \"3.12\"", "boto3 (>=1.15.3) ; python_version >= \"3.12\""]
 sqlite = ["anysqlite (>=0.0.5)"]
 yaml = ["pyyaml (==6.0.1)"]
 
@@ -1658,23 +1659,27 @@ files = [
 
 [[package]]
 name = "importlib-metadata"
-version = "7.2.1"
+version = "8.6.1"
 description = "Read metadata from Python packages"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "importlib_metadata-7.2.1-py3-none-any.whl", hash = "sha256:ffef94b0b66046dd8ea2d619b701fe978d9264d38f3998bc4c27ec3b146a87c8"},
-    {file = "importlib_metadata-7.2.1.tar.gz", hash = "sha256:509ecb2ab77071db5137c655e24ceb3eee66e7bbc6574165d0d114d9fc4bbe68"},
+    {file = "importlib_metadata-8.6.1-py3-none-any.whl", hash = "sha256:02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e"},
+    {file = "importlib_metadata-8.6.1.tar.gz", hash = "sha256:310b41d755445d74569f993ccfc22838295d9fe005425094fad953d7f15c8580"},
 ]
 
 [package.dependencies]
-zipp = ">=0.5"
+zipp = ">=3.20"
 
 [package.extras]
+check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\""]
+cover = ["pytest-cov"]
 doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
+enabler = ["pytest-enabler (>=2.2)"]
 perf = ["ipython"]
-test = ["flufl.flake8", "importlib-resources (>=1.3) ; python_version < \"3.9\"", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy", "pytest-perf (>=0.9.2)", "pytest-ruff (>=0.2.1)"]
+test = ["flufl.flake8", "importlib_resources (>=1.3) ; python_version < \"3.9\"", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-perf (>=0.9.2)"]
+type = ["pytest-mypy"]
 
 [[package]]
 name = "jinja2"
@@ -3029,21 +3034,21 @@ unidecode = ["Unidecode (>=1.1.1)"]
 
 [[package]]
 name = "pytoyoda"
-version = "2.3.1"
+version = "2.4.0"
 description = "Python client for Toyota Connected Services."
 optional = false
 python-versions = "<4.0,>=3.9"
 groups = ["main"]
 files = [
-    {file = "pytoyoda-2.3.1-py3-none-any.whl", hash = "sha256:643b8540062be1364f12a0f9e67197100027f43e3214604e9cc34202bd6c72d4"},
-    {file = "pytoyoda-2.3.1.tar.gz", hash = "sha256:740a40e8f323b6939ffdb780ff6f08ed2ae3d9136cfec7f7e6e9f967977d6e26"},
+    {file = "pytoyoda-2.4.0-py3-none-any.whl", hash = "sha256:4fbddbd0209e278cc3f13974c7ece6e0aaa69bb74b3f356301f2955953d57559"},
+    {file = "pytoyoda-2.4.0.tar.gz", hash = "sha256:7f58f96bcda897e809247ebdaff8a7ecb810f83a173f9f628a47d79bb81b2470"},
 ]
 
 [package.dependencies]
 arrow = ">=1.1,<2.0"
-hishel = ">=0.0.19,<0.0.20"
+hishel = ">=0.1.0,<0.2.0"
 httpx = ">=0.18.1"
-importlib-metadata = ">=7.0.1,<8.0.0"
+importlib-metadata = ">=8.0.0,<9.0.0"
 langcodes = ">=3.1,<4.0"
 pydantic = ">=2.10.4,<3.0.0"
 pyjwt = ">=2.8.0,<3.0.0"
