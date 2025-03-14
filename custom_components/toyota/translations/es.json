@@ -11,7 +11,7 @@
       }
     },
     "error": {
-      "invalid_username": "La dirección de correo electrónico debe container un @",
+      "invalid_username": "La dirección de correo electrónico debe contener un @",
       "invalid_auth": "Correo electrónico/Contraseña incorrecta.",
       "unknown": "Error inesperado."
     }

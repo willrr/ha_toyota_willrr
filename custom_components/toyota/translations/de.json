@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "description": "Bitte gebe unten define E-Mail-Adresse und dein Passwort für MyT ein.",
+        "description": "Bitte gebe unten deine E-Mail-Adresse und dein Passwort für MyT ein.",
         "data": {
           "email": "E-Mail",
           "password": "Passwort",
