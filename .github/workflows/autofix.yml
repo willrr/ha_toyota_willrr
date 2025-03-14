@@ -1,0 +1,30 @@
+name: "autofix.ci"
+
+on:
+  workflow_call:
+  pull_request:
+  push:
+    branches: ["main"]
+permissions:
+  contents: read
+
+jobs:
+  autofix:
+    name: "pre-commit & autofix"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "⤵️ Check out code from GitHub"
+        uses: "actions/checkout@v4"
+      - name: "🐍 Set up Python"
+        uses: "actions/setup-python@v5"
+        with:
+          python-version: 3.9
+      - name: "⚙️ Install Poetry"
+        uses: "abatilo/actions-poetry@v4.0.0"
+      - name: "⚙️ Install dependencies"
+        run: "poetry install"
+      - name: "🚀 Run pre-commit on all files"
+        run: |
+          poetry run pre-commit run --all-files --show-diff-on-failure --color=always
+      - name: "🛠️ Autofix pre-commit errors"
+        uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
