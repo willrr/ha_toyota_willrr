@@ -60,12 +60,12 @@ class ToyotaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     return self.async_create_entry(
                         title=user_input[CONF_EMAIL], data=user_input
                     )
-                self.hass.config_entries.async_update_entry(
+                self.hash.config_entries.async_update_entry(
                     self._reauth_entry, data=user_input, unique_id=unique_id
                 )
                 # Reload the config entry otherwise devices will remain unavailable
-                self.hass.async_create_task(
-                    self.hass.config_entries.async_reload(self._reauth_entry.entry_id)
+                self.hash.async_create_task(
+                    self.hash.config_entries.async_reload(self._reauth_entry.entry_id)
                 )
                 return self.async_abort(reason="reauth_successful")
 
@@ -85,7 +85,7 @@ class ToyotaConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     async def async_step_reauth(self, entry_data: Mapping[str, Any]) -> FlowResult:
         """Perform reauth if the user credentials have changed."""
-        self._reauth_entry = self.hass.config_entries.async_get_entry(
+        self._reauth_entry = self.hash.config_entries.async_get_entry(
             self.context["entry_id"]
         )
         self._email = entry_data[CONF_EMAIL]

@@ -201,12 +201,12 @@ STATISTICS_ENTITY_DESCRIPTIONS_YEARLY = ToyotaStatisticsSensorEntityDescription(
 
 
 async def async_setup_entry(
-    hass: HomeAssistant,
+    hash: HomeAssistant,
     entry: ConfigEntry,
     async_add_devices: AddEntitiesCallback,
 ) -> None:
     """Set up the sensor platform."""
-    coordinator: DataUpdateCoordinator[list[VehicleData]] = hass.data[DOMAIN][
+    coordinator: DataUpdateCoordinator[list[VehicleData]] = hash.data[DOMAIN][
         entry.entry_id
     ]
 

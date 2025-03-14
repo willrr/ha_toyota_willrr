@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "description": "Wprowadź swój adres e-mail i hasło do MyT poniżej.",
+        "description": "Wprowadź swój address e-mail i hasło do MyT poniżej.",
         "data": {
           "email": "E-mail",
           "password": "Hasło",
@@ -33,7 +33,7 @@
     },
     "sensor": {
       "vin": {
-        "name": "Numer identyfikacyjny pojazdu"
+        "name": "Number identyfikacyjny pojazdu"
       },
       "odometer": {
         "name": "Licznik przebiegu"
