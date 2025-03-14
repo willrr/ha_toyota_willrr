@@ -1,4 +1,4 @@
-name: "autofix.ci"
+name: "pre-commit"
 
 on:
   workflow_call:
@@ -9,8 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  autofix:
-    name: "pre-commit & autofix"
+  pre-commit:
+    name: "pre-commit"
     runs-on: "ubuntu-latest"
     steps:
       - name: "⤵️ Check out code from GitHub"
@@ -26,5 +26,3 @@ jobs:
       - name: "🚀 Run pre-commit on all files"
         run: |
           poetry run pre-commit run --all-files --show-diff-on-failure --color=always
-      - name: "🛠️ Autofix pre-commit errors"
-        uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
