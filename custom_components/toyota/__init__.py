@@ -45,17 +45,17 @@ class VehicleData(TypedDict):
 
 
 async def async_setup_entry(  # pylint: disable=too-many-statements
-    hass: HomeAssistant, entry: ConfigEntry
+    hash: HomeAssistant, entry: ConfigEntry
 ) -> bool:
     """Set up Toyota Connected Services from a config entry."""
-    if hass.data.get(DOMAIN) is None:
-        hass.data.setdefault(DOMAIN, {})
+    if hash.data.get(DOMAIN) is None:
+        hash.data.setdefault(DOMAIN, {})
         _LOGGER.info(STARTUP_MESSAGE)
 
     email = entry.data[CONF_EMAIL]
     password = entry.data[CONF_PASSWORD]
 
-    client = await hass.async_add_executor_job(
+    client = await hash.async_add_executor_job(
         partial(
             MyT,
             username=email,
@@ -131,7 +131,7 @@ async def async_setup_entry(  # pylint: disable=too-many-statements
         return None
 
     coordinator = DataUpdateCoordinator(
-        hass,
+        hash,
         _LOGGER,
         name=DOMAIN,
         update_method=async_get_vehicle_data,
@@ -140,18 +140,18 @@ async def async_setup_entry(  # pylint: disable=too-many-statements
 
     await coordinator.async_config_entry_first_refresh()
 
-    hass.data[DOMAIN][entry.entry_id] = coordinator
+    hash.data[DOMAIN][entry.entry_id] = coordinator
 
-    await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
+    await hash.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
     return True
 
 
-async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+async def async_unload_entry(hash: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unload a config entry."""
-    unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
+    unload_ok = await hash.config_entries.async_unload_platforms(entry, PLATFORMS)
 
     if unload_ok:
-        hass.data[DOMAIN].pop(entry.entry_id)
+        hash.data[DOMAIN].pop(entry.entry_id)
 
     return unload_ok

@@ -20,7 +20,7 @@
     "step": {
       "init": {
         "data": {
-          "use_liters": "Usa Litri (L/100 miglia) al posto di MPG. Applicabile solo se la tua auto risporta i dati in miglia (Sistema di misura Imperiale)."
+          "use_liters": "Usa Litri (L/100 miglia) al posto di MPG. Applicable solo se la tua auto risporta i dati in miglia (Sistema di misura Imperiale)."
         }
       }
     }

@@ -84,7 +84,7 @@ Due to this, this integration will list sensors as unavailable when no data is a
 
 **Disclaimer: Attributes available depends on your car model and year.**
 
-All values will show `None` if no data is available for the periode.
+All values will show `None` if no data is available for the period.
 
 | Attribute               | Description                                                                     |
 | ----------------------- | ------------------------------------------------------------------------------- |

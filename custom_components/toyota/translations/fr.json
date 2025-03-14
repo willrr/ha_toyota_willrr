@@ -2,17 +2,17 @@
   "config": {
     "step": {
       "user": {
-        "description": "Merci d'insérer vos identifiant et mot de passe MyT ci-dessous.",
+        "description": "Merci d'insérer vos identifiant et not de passe MyT ci-dessous.",
         "data": {
           "email": "Email",
-          "password": "Mot de passe",
-          "use_metric_values": "Utiliser des unités métriques (par exemple, km au lieu de miles)"
+          "password": "Not de passe",
+          "use_metric_values": "Utiliser des unités métriques (par example, km au lieu de miles)"
         }
       }
     },
     "error": {
       "invalid_username": "L'adresse Email doit contenir un @.",
-      "invalid_auth": "Email ou mot de passe incorrect.",
+      "invalid_auth": "Email ou not de passe incorrect.",
       "unknown": "Erreur inattendue."
     }
   },
