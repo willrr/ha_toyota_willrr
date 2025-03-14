@@ -38,7 +38,6 @@ repos:
         name: "🛑 Don't commit to main branch"
         args: [--branch=main]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    # Ruff version.
     rev: v0.10.0
     hooks:
       - id: ruff
