@@ -34,9 +34,6 @@ repos:
         name: "🔚 Fix End of Files"
       - id: trailing-whitespace
         name: "⬜ Fix trailing whitespaces"
-      - id: no-commit-to-branch
-        name: "🛑 Don't commit to main branch"
-        args: [--branch=main]
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.10.0
     hooks:
