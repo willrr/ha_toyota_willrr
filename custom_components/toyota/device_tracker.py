@@ -22,12 +22,12 @@ PARKING_TRACKER_DESCRIPTION: EntityDescription = EntityDescription(
 
 
 async def async_setup_entry(
-    hash: HomeAssistant,
+    hass: HomeAssistant,
     entry: ConfigEntry,
     async_add_devices: AddEntitiesCallback,
 ) -> None:
     """Set up the Toyota Connected Services tracker from config entry."""
-    coordinator: DataUpdateCoordinator[list[VehicleData]] = hash.data[DOMAIN][
+    coordinator: DataUpdateCoordinator[list[VehicleData]] = hass.data[DOMAIN][
         entry.entry_id
     ]
 

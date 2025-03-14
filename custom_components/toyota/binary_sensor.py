@@ -220,12 +220,12 @@ TRUNK_DOOR_OPEN_ENTITY_DESCRIPTION = ToyotaBinaryEntityDescription(
 
 
 async def async_setup_entry(
-    hash: HomeAssistant,
+    hass: HomeAssistant,
     entry: ConfigEntry,
     async_add_devices: AddEntitiesCallback,
 ) -> None:
     """Set up the binary sensor platform."""
-    coordinator: DataUpdateCoordinator[list[VehicleData]] = hash.data[DOMAIN][
+    coordinator: DataUpdateCoordinator[list[VehicleData]] = hass.data[DOMAIN][
         entry.entry_id
     ]
 

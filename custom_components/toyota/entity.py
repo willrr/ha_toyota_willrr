@@ -58,6 +58,6 @@ class ToyotaBaseEntity(CoordinatorEntity):
         super()._handle_coordinator_update()
 
     async def async_added_to_hass(self) -> None:
-        """When entity is added to hash."""
+        """When entity is added to hass."""
         await super().async_added_to_hass()
         self._handle_coordinator_update()
