@@ -11,8 +11,8 @@ repos:
     hooks:
       - id: codespell
         name: 👄 Check code spelling
-        args: [--write-changes, --skip="./*"]
-        exclude: (pyproject.toml|poetry.lock)
+        args: [--write-changes, --skip="./*, translations/*"]
+        exclude: (pyproject.toml|poetry.lock|)
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
