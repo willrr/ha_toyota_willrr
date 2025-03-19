@@ -17,7 +17,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryAuthFailed, ConfigEntryNotReady
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 from pydantic import ValidationError
-from pytoyoda import MyT
+from pytoyoda.client import MyT
 from pytoyoda.exceptions import ToyotaApiError, ToyotaInternalError, ToyotaLoginError
 from pytoyoda.models.summary import Summary
 from pytoyoda.models.vehicle import Vehicle
@@ -54,13 +54,10 @@ async def async_setup_entry(  # pylint: disable=too-many-statements
 
     email = entry.data[CONF_EMAIL]
     password = entry.data[CONF_PASSWORD]
+    metric_values = entry.data[CONF_METRIC_VALUES]
 
     client = await hass.async_add_executor_job(
-        partial(
-            MyT,
-            username=email,
-            password=password,
-        )
+        partial(MyT, username=email, password=password, use_metric=metric_values)
     )
 
     try:
@@ -74,37 +71,34 @@ async def async_setup_entry(  # pylint: disable=too-many-statements
 
     async def async_get_vehicle_data() -> Optional[list[VehicleData]]:
         """Fetch vehicle data from Toyota API."""
-        metric_values = entry.data[CONF_METRIC_VALUES]
-
         try:
-            vehicles = await asyncio.wait_for(
-                client.get_vehicles(metric=metric_values), 15
-            )
+            vehicles = await asyncio.wait_for(client.get_vehicles(), 15)
             vehicle_informations: list[VehicleData] = []
-            if vehicles is not None:
+            if vehicles:
                 for vehicle in vehicles:
-                    await vehicle.update()
-                    vehicle_data = VehicleData(
-                        data=vehicle, statistics=None, metric_values=metric_values
-                    )
-
-                    if vehicle.vin is not None:
-                        # Use parallel request to get car statistics.
-                        driving_statistics = await asyncio.gather(
-                            vehicle.get_current_day_summary(),
-                            vehicle.get_current_week_summary(),
-                            vehicle.get_current_month_summary(),
-                            vehicle.get_current_year_summary(),
+                    if vehicle:
+                        await vehicle.update()
+                        vehicle_data = VehicleData(
+                            data=vehicle, statistics=None, metric_values=metric_values
                         )
 
-                        vehicle_data["statistics"] = StatisticsData(
-                            day=driving_statistics[0],
-                            week=driving_statistics[1],
-                            month=driving_statistics[2],
-                            year=driving_statistics[3],
-                        )
+                        if vehicle.vin is not None:
+                            # Use parallel request to get car statistics.
+                            driving_statistics = await asyncio.gather(
+                                vehicle.get_current_day_summary(),
+                                vehicle.get_current_week_summary(),
+                                vehicle.get_current_month_summary(),
+                                vehicle.get_current_year_summary(),
+                            )
 
-                    vehicle_informations.append(vehicle_data)
+                            vehicle_data["statistics"] = StatisticsData(
+                                day=driving_statistics[0],
+                                week=driving_statistics[1],
+                                month=driving_statistics[2],
+                                year=driving_statistics[3],
+                            )
+
+                        vehicle_informations.append(vehicle_data)
 
                 _LOGGER.debug(vehicle_informations)
                 return vehicle_informations
