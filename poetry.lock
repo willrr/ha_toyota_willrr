@@ -577,62 +577,62 @@ docs = ["Sphinx (>=5,<8)", "myst-parser (>=0.18,<3.1)", "sphinx-rtd-theme (>=1,<
 
 [[package]]
 name = "bluetooth-data-tools"
-version = "1.26.1"
+version = "1.26.2"
 description = "Tools for converting bluetooth data and packets"
 optional = false
 python-versions = ">=3.10"
 groups = ["main", "dev"]
 files = [
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:478b35ff52e1f8721ccce4db0d52b0592f2ae7a4a2b6cf0ba569f93c95a6457f"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:4904dfd1c6ae991f9c325653870902a0055f5c3d3ff314097b3fa160267b4063"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:93e6268a2b9bfc6347a58f1422fd258bd9724e6dd4927b23fc704d59227240fc"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:bae01f31d947726505c8fc86d945e803aa7a675e8d58b3d80f384d9b8fe3edfa"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a1eac3b2a1121f14c8e8d19926acfa97197777ab1eb32c71b261851de9883973"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:7f22eb3c4b07a486b24174b48754fc237a89437c0c2485f2aca1e7341cfa1042"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:284c4e7458728f0f09537bc759cf29f87f00a413f6c3e0f64375563a0098d0d0"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-musllinux_1_2_armv7l.whl", hash = "sha256:13c03893e179d267fb75a30bc122ee3be86c22fc1a4cb2265446a2bc9047d232"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:0c5b2a71df962dcab9a8c2e5e64436f65c599398ae15f725b43605d516b2ade3"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:172d7ac720d12740ea73073862c648a1a2bdc2f13bdbae84918a770f718138fd"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-win32.whl", hash = "sha256:9ce18eed96eff7eb5cdfbeb66e9f73813f3facb6671e40a4c2bc78e6d8e88ef3"},
-    {file = "bluetooth_data_tools-1.26.1-cp310-cp310-win_amd64.whl", hash = "sha256:cc3a2c777e495e7084e2cbd1be4af05c06f6a309ede87a90a38896501675dbad"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:4c114f636f063d4140249af06d45838cd20f88c598c3ea8d3ee2995e6f40c9af"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:2c69043f538103d5b2413c8e34b1c1437dc9a7e10c6e1f0427d1374e0cdecf19"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e9485bbcfaa245ae0528cf4ec9d81576629a5a67ae16d6e672a6ec251c741e07"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e226e87b952914e3b5ccf8679ca2c265a3c2a8f488ac4e15da62acfa6c57b191"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8d9224e515c35a537d8474aa365caa2754b5e27f0166d7be20d530961fac9cdf"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:8d010574afd042da067b3de4b9c36fab1383d7d54f6d1268c5d8f863d623b451"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:f52a87531ff47d6f9762fdfa28f6837c64f82e152205bb2bc097353f530b9f1f"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-musllinux_1_2_armv7l.whl", hash = "sha256:365717de5460e4d703aeb99accccf98f37a0deffbccfc366853507376fe378a5"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:e0911b1d0dedd22bc1d9c797d975a52dc6e9e0a0d625702486bd1277b07994ad"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:90ae35d7c8885ee04000f155aa1e03de4a94c95557e05c75fb3cfc0744c0515c"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-win32.whl", hash = "sha256:b97b21842103784bc915ab36bf48ea93e0e9a550f3fd435afba8bee0fd26b8c3"},
-    {file = "bluetooth_data_tools-1.26.1-cp311-cp311-win_amd64.whl", hash = "sha256:ff8848df5581b5f9c3e91234ba2c6e883e0c6f5ce45516611bb3c4abca7c4d97"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:23763282ff1a2a03714df132bf5799b3e65ee5595b8c089b017cace23bbdcfeb"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:7a4b3c8e30f0fa102bcff49147bb74ceea148c1f40e30245bad2a3c1db7e9dcc"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:61c46ac423bcf685e2b3348abc2264d55216209470df316830385fba593f5c52"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:858082adda19cb8811fee7cd33382d274ac469b76e39a038deefe99c6d74158e"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e3295841a7b914a43417f7bf48efd6ddc856f703719e72f87add1fef587469b1"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:a63d4e8587c575dfd6c3b3458c8ef7e3b82b0d25c96e4031b7e2efd886020a1f"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:f346719adbf412234e13a7a910e19f25aeabf546d9f566cd15f9347264d51ae3"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:04abcd277966dea04a5288f5ceebd4c4b75c7ed99d599c6f40567249c54fcaff"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:f0b15de4bbcd8ef4e389ffbbf2f71a00815b32381ac8784232b8d9c2ece4c934"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:c127b31f164afecccce7231e9108baaae1fba096fa0dd2827028ebc0c2651723"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-win32.whl", hash = "sha256:f9c3c28945d76b6af5c043762f852eeec3e05c5a1a8f3ad3d21404ecb13748bb"},
-    {file = "bluetooth_data_tools-1.26.1-cp312-cp312-win_amd64.whl", hash = "sha256:221bd0d417d7ba1b5bc4ef0e5b723eb7bfc93c05c4105eed26423167b845ff66"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:78c9f038199bd33003efb829892672b425cc2590bf7dc345d8802683c5c1efe8"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:8f1302034add12cca051ddd2efc079bcab834e5b6b1b31a7754e9696cfde1ed5"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a153f0b80f8e6b7113f7671fb22be7c6cbba06e416b3a031b46b5f053da0201e"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:8bc5887e84d52a497d583c3f3bc383b3f49bd924b12eaad41327c064c413986e"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:df3f34587f1bbf666d09d87774b9bfbf612d156e02d9883c22b377bc2670daa6"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:e95d590596742387f6fd08a87a6bf461457560a18d3adb8e4568ed6f16975a97"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-manylinux_2_36_x86_64.whl", hash = "sha256:1a39bff8b1afcdedfbc9dc523aa83b67b193f8207e156e08dcbd2c1b966a5738"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:7507c387f7a2a044aad1ecd8200df1a4a296fa14f61ad46e1715c14fa83cd361"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:158e08a6a1f3768171a934160f737b058277e16c41c127b318821cac92f56a12"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:505bcd80a29d87effeeb7a8598a20caa2bba1071d817f541b1d17f7652221cb4"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:23c7618f42c12f46ce816b1c35f97ba64652d84849ef174de6b122c62c541282"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-win32.whl", hash = "sha256:d9566e283e21eb56f8bf7c1d22fa65b590eba6615fedfd80ee4c1ffa205bb401"},
-    {file = "bluetooth_data_tools-1.26.1-cp313-cp313-win_amd64.whl", hash = "sha256:d883322204f7ad53d22206b416364a7bdfca19601b984cae9fd138723ef10fae"},
-    {file = "bluetooth_data_tools-1.26.1.tar.gz", hash = "sha256:eb79cb21900cb0d35457719ed2c825049dc2268a7aac22e558f7ae35310c661e"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:aff8972a2eb2b5fb38be5bde452ef9c860506a2d421d6b77941e9dc3f3d7645a"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:d77cf3f6533601101d6370130329a7d8a8c563e26dc9ac7ad631f871094feb32"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:77fc669e9b8ddbcff568a9646dd23fe2b3afdfc7c7f896d6edfe6499d8a155c3"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:4a88cf9eda8c298eaeb8fab16dbd25e3d3fea502a282311fe033cb56284fa8a9"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bf7d7099af0cdd7d89aed5d1a01054412a3545668a80911c08ecd7678cff5bea"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:7359d1495dbb83bdf9661e281c14a05cc5828874cce307e0caca7294aa80ce05"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:5e35bd7645ef7c2c3dc6baab29657025b0701a0fe1bd94ebe6cec454266ad032"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-musllinux_1_2_armv7l.whl", hash = "sha256:0feae15d8717ee8c2d597cece1df553a9d2a607bbb9d29b82c0c3309ba904735"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:e30d5f392692eecadda2e41c8561b0b08c19c933b00c32627c2b8bf1e64e7699"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:6b22b23d9686fe0c586c65cb51b412fd0543849a1df5dedfd94ef13d5f23d903"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-win32.whl", hash = "sha256:8c68bb4f25ce34121c47102cf984a4a6e877f74e8ffca52de94538f9a6a6c74f"},
+    {file = "bluetooth_data_tools-1.26.2-cp310-cp310-win_amd64.whl", hash = "sha256:f7ee73bc56250d6c2696d881f9c576d7173adba30b2a592303ecefd17bb2760d"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:3f4d49d731e5fb12847f2af7a4c255907f3f509e5272c4545b9cdcd6bbd7b078"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:253e787855725d2f79df4282c7a573fafe92a9ddd57e60b8bd68dc416e2f8f24"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:199254736d587b2b1bc0f29e83e6d714f58e8a0a5d68134189cd64c12df758d4"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:73ed8709b691c136c3e18e0d07b7327c4134f3a69464a7dc4506a9adfbace4e2"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5630c05551bdde8f505a29038bb040dbc4c9f557e84386378046a9f1bf12aaa9"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:c518d7b7f5cfb2f39fda0e7ae05ebbc335db326436fc62237347aa284166db50"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:c9904aad05b07f5ea5fffa7c02b40958c5308eac7c9547575fd4edc6eb7a4de1"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-musllinux_1_2_armv7l.whl", hash = "sha256:d943c6a449f960fa3c3c9dddf67de3bda2f69ed38bf1cabe6fabab9c5ae51a68"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:f390b06a73b277c37091d7f0972b5107622f59c857bc8031c2c3f8f81b3b1c78"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:c4c2b15e2b22e37c47cb63da9090a546268804aa299aecebce0d28e9446861a1"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-win32.whl", hash = "sha256:1f85688257ce09478efe574ac7132d31428c2cf0e1d284e39d916706e72ec638"},
+    {file = "bluetooth_data_tools-1.26.2-cp311-cp311-win_amd64.whl", hash = "sha256:05e78a21486185aa8ab95b74fa7b73c560b0031680fcf6f20b46de35c9c5d186"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:1eea41e451c7302b9ff7cf2de54c97f236debb55af0f9d004d7314fdd0131b72"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:b9862b048aecdafe49387c22e7c0c8c043719e29e733e8928760862ff8990750"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:050132dd77d103de1367c6ddb2a199d483d545224be0eff9a9716badae9d9df2"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e4b8c2d06ec4a3ce5fb5b1bee6867809d72dfa4cb61ed079f46b6ea1f809d150"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0b3e1a11da665c99387ec847ee2fc9a2e9dfac83c6c1ffef50ac374ebee21ad1"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:600a09c6465d549fb32ccc5276be17c25d6bf44dd03ffa90767454da73d21d96"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:0357b4b32c9e5c89d5e5bce392711fe9b442c56959068368581e469ad8f28fb9"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:d087f0f8f71319612c52f7a9542fb1179a0382973461d60693bcbf0bc76ba2a1"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:8e82ac6289974e80a30be75ea8ed533898b825e15ef167ae2adad31682ed37e9"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:a354c97ff1b8d0366174c588fb29148c8db41a9cb6706fdc89bd7dc00e3d77de"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-win32.whl", hash = "sha256:880018291a389d787e087be9ab716470c070b666e53c3374dbb34547737dc849"},
+    {file = "bluetooth_data_tools-1.26.2-cp312-cp312-win_amd64.whl", hash = "sha256:b70734d73e4da9e4147750e686fe79e3fb639a79ae0e717acc48dad1b72db984"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:9e650450ed21c1b744e41f07d82d7cb9081ccc84b04ffd39f0137db68063cb9c"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:d1540cba374aa5aaae2ad4993876a77cf2e4e1b2be112076b4b8fb988942da3c"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bccc9223f91b1c817d9eac769747c8b0cc7d73f1a576590f1cdb21952eaa591c"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:182bf9d4bf6f867ccaef2ed1b066af357748719dc2ba58784019df9d7b8ec6c8"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:675bdc9bb6bb736297475b78aaf38aba0f8fdda87d2e9bf0a12b10d65902d767"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:83084f20bd57104f476269053d9568d0219036d26c789b3b11413a9f9edaa32b"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-manylinux_2_36_x86_64.whl", hash = "sha256:0519c134e73c29036bab9d627e9492281e96e3a59b154f4985f2461ea21c8054"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:54971e1440f0d3295f8ebd1cfe961d41bf37e434c4b92891a78362c485a0da2c"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:e4425b994bf13c7e46d79f304cc7f3c07d888b33969dec3717c94ada7c9fd25d"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:5dd56a2a8d57936ba43512e3b87c7e5cc2bbcae78274d57d2faa32e827eef952"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:ecac578952d7731af504064188674e53e6587837f67d8d7162fb309be9047516"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-win32.whl", hash = "sha256:28c95529f707661484dcac55a9c33b892995fc0c242ab43673f8e870bdf6dd06"},
+    {file = "bluetooth_data_tools-1.26.2-cp313-cp313-win_amd64.whl", hash = "sha256:4048b0cb8382f6bc205b464d8cf85949cc0364fda00c00ff533363044cc58c4b"},
+    {file = "bluetooth_data_tools-1.26.2.tar.gz", hash = "sha256:3c6a2b31098f3ce896880ed7485686f44bc8d15ad122865caecbcd812d57d913"},
 ]
 
 [package.dependencies]
@@ -643,18 +643,18 @@ docs = ["Sphinx (>=5,<9)", "myst-parser (>=0.18,<4.1)", "sphinx-rtd-theme (>=1,<
 
 [[package]]
 name = "boto3"
-version = "1.37.15"
+version = "1.37.18"
 description = "The AWS SDK for Python"
 optional = false
 python-versions = ">=3.8"
 groups = ["main", "dev"]
 files = [
-    {file = "boto3-1.37.15-py3-none-any.whl", hash = "sha256:78cc1b483cc637e1df8e81498d66f89550d4ee92175ccab5be1a2226672fe6b9"},
-    {file = "boto3-1.37.15.tar.gz", hash = "sha256:586332456fff19328d57a88214a2ac2eda1bafab743556a836eda46a4ce613c6"},
+    {file = "boto3-1.37.18-py3-none-any.whl", hash = "sha256:1545c943f36db41853cdfdb6ff09c4eda9220dd95bd2fae76fc73091603525d1"},
+    {file = "boto3-1.37.18.tar.gz", hash = "sha256:9b272268794172b0b8bb9fb1f3c470c3b6c0ffb92fbd4882465cc740e40fbdcd"},
 ]
 
 [package.dependencies]
-botocore = ">=1.37.15,<1.38.0"
+botocore = ">=1.37.18,<1.38.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.11.0,<0.12.0"
 
@@ -663,14 +663,14 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.37.15"
+version = "1.37.18"
 description = "Low-level, data-driven core of boto 3."
 optional = false
 python-versions = ">=3.8"
 groups = ["main", "dev"]
 files = [
-    {file = "botocore-1.37.15-py3-none-any.whl", hash = "sha256:996b8d6a342ad7735eb07d8b4a81dad86e60ce0889ccb3edec0cd66eece85393"},
-    {file = "botocore-1.37.15.tar.gz", hash = "sha256:72e6f1db6ebc4112d6ba719c97ad71ac7cf4a2f3729ae74fa225641e3ddcba92"},
+    {file = "botocore-1.37.18-py3-none-any.whl", hash = "sha256:a8b97d217d82b3c4f6bcc906e264df7ebb51e2c6a62b3548a97cd173fb8759a1"},
+    {file = "botocore-1.37.18.tar.gz", hash = "sha256:99e8eefd5df6347ead15df07ce55f4e62a51ea7b54de1127522a08597923b726"},
 ]
 
 [package.dependencies]
@@ -1043,58 +1043,58 @@ test-randomorder = ["pytest-randomly"]
 
 [[package]]
 name = "dbus-fast"
-version = "2.39.6"
+version = "2.43.0"
 description = "A faster version of dbus-next"
 optional = false
 python-versions = ">=3.9"
 groups = ["main", "dev"]
 markers = "platform_system == \"Linux\""
 files = [
-    {file = "dbus_fast-2.39.6-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:bcf845a85293f9eb0da15cf2b01477608c55e1d625f2c595354290cfc46d22ca"},
-    {file = "dbus_fast-2.39.6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6ea5079edf096d5cd081d8639ebc6072ddc1646aab37ca0f529021ba977ac253"},
-    {file = "dbus_fast-2.39.6-cp310-cp310-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:832c6f367ab50b7365519feeef9df1dcd6f7938ecbbe5fd00f4785ab9a73ae44"},
-    {file = "dbus_fast-2.39.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c4e63f493d4b941acb3b68ff3778a5259fa4d4a3a6949ebb69fe80818cd29cdf"},
-    {file = "dbus_fast-2.39.6-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:af6a44bdbaaa66b8168d55d4ea04dfe6f5e14bf5da96609b74a13c78d7b4179c"},
-    {file = "dbus_fast-2.39.6-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:b64cf06788751c233b302001df84a8d8f4cbcea0f7d09b9892e2039f8da97b5e"},
-    {file = "dbus_fast-2.39.6-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:87f59a793191bc9862b8e37b997b84dd5b4c8cb4a08cd8c75c7359541d68daac"},
-    {file = "dbus_fast-2.39.6-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:69d7939f2076f882f1c1be4625b80ebb1b4761622710446012c38b8161d1ec4e"},
-    {file = "dbus_fast-2.39.6-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1e74c62144e70a6ff2954a3ffc3c58717febd807bfa79516546232ab1fe6f601"},
-    {file = "dbus_fast-2.39.6-cp311-cp311-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:91efb5f609b3bd3db5c5c3ddb22b61403d346cc8768d54243072293ba8e5dd6c"},
-    {file = "dbus_fast-2.39.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:676e4b136b1030988a5e943f5cad70af9c9bbefc15762a71623c35d43f632340"},
-    {file = "dbus_fast-2.39.6-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:868784c6feef883ee46240db4448031947789fe9f863471dbe051f3facca270a"},
-    {file = "dbus_fast-2.39.6-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:d0ca9ce3aa264dd38c9c8a9bde5d224563077156d32ec8dd58a78db130deed4a"},
-    {file = "dbus_fast-2.39.6-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:877c8e361667fe92562c85b3902ca91d16b1a53b6de9d2db11b2d7a742222a3f"},
-    {file = "dbus_fast-2.39.6-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:9704e2e27444e266d21d83ba4bcbf27e9666bb6274268cf20d8ea4a52404bf38"},
-    {file = "dbus_fast-2.39.6-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8abd3d27da0d2d1d863059514efa094b4d488920f9458aa40c655904905150d8"},
-    {file = "dbus_fast-2.39.6-cp312-cp312-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:8dca1ec19826f95838821578d1a6dddb8ff147df46b3640132db080027ab04b1"},
-    {file = "dbus_fast-2.39.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:809c48eba60c9d593e265ee1b90d307e138c01dca14297838ce1dd9aca231fb4"},
-    {file = "dbus_fast-2.39.6-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:930eaf3a8a29a166fa4940a560b5b22d2dae342d43c568cdcffeb699337deeae"},
-    {file = "dbus_fast-2.39.6-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:587e38c403560986a3495eb4f162efa0690bfb8e3b8fc426976b13ad4d918400"},
-    {file = "dbus_fast-2.39.6-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:1fe17820e3956b1719aacc605c19f3235d143b1c92edcf74b0416134171c5e8f"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:d1d2e733a31e2e3d27cbed165344f4e41136b77836a7157a1f341556fdde5e00"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6293ba84a45c91ef94ef315d9101f4fe410b27c82135f8096fca7d6549cb9288"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:c559bcf3345fe84c16d4eea99712337a6d6806a02c9f2117a143381cc07f6b47"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8408b810c43892fa2c51982c88f6e08a3cec0ce9fa486203a0fc49fbab0cb37b"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-manylinux_2_36_x86_64.whl", hash = "sha256:e5d148e5724d243550230235625305782ceec73b4ef48f9e1c4b507083a1f3cb"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:b134b3a91f23e11240aa81bd961a8f57d276374b76cee4fba29ea690692c15f8"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:551ee7fc981e6a65452877028c927106a216e8f9b38efbd5fcd90d4109e58fee"},
-    {file = "dbus_fast-2.39.6-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:8472e7f4058b4dc09e8fd2cbbb8e73965095b7693c0faa0945ceab9ac9afbe9f"},
-    {file = "dbus_fast-2.39.6-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:b34b670477142386e78b9ab9be61fc07d0cae68b89dd8a852fed9877d15df04a"},
-    {file = "dbus_fast-2.39.6-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e35fbefaa0d34e110e78a864a0eef9f771aaa24f6a6948032e79df9ac61004ae"},
-    {file = "dbus_fast-2.39.6-cp39-cp39-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:c4f799b8aca6ef1b07aa73006efad214fc3ae561ac8555a03229ac0044d57505"},
-    {file = "dbus_fast-2.39.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:030291d43f6296bd6f8d0d3f395f2a0f61bebc3a9c9ee9b1217662229d75cc48"},
-    {file = "dbus_fast-2.39.6-cp39-cp39-musllinux_1_2_aarch64.whl", hash = "sha256:11ec823935700be1abde631548b3cfe92f41894eed2e7b11c29aafd0e0d4ebd1"},
-    {file = "dbus_fast-2.39.6-cp39-cp39-musllinux_1_2_i686.whl", hash = "sha256:c3c96d3b973374e931d2c49044aece2f4dac59647a36e7e55ed3707128c7d759"},
-    {file = "dbus_fast-2.39.6-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:a42fa9ab6908372c7727573e27b1bfcf7edbf165bdd16fed08f9eccadeaec7ed"},
-    {file = "dbus_fast-2.39.6-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:44a0cd7e8373c043c45747c3fa5f3552f8e2d09f768149ef81281d39e2405dfb"},
-    {file = "dbus_fast-2.39.6-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:123b153f005b2b262b7ed2a7775325b60473ad12be5a059baba933fc2f3356e9"},
-    {file = "dbus_fast-2.39.6-pp310-pypy310_pp73-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:58d01854bd150aadb1ca1f59f166185a24a8387b33099d97863adbc7d91b0428"},
-    {file = "dbus_fast-2.39.6-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux_2_5_x86_64.manylinux1_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9c5ae45021009c6e02d4a97cb03a7fe4c4a8c9562a8442a46b0f4ac48617c433"},
-    {file = "dbus_fast-2.39.6-pp39-pypy39_pp73-macosx_11_0_arm64.whl", hash = "sha256:fb5fba8412f3dc8b563e629a11c495d051333c401e0fd9df1edd4fd6670f4d47"},
-    {file = "dbus_fast-2.39.6-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3187fd17e473c5eb44d773114885cfc233a7416e309d8be63bfae9f937703c2e"},
-    {file = "dbus_fast-2.39.6-pp39-pypy39_pp73-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:70dc8c8bff4694f30363a7ef0cc31f32a28c901cc6e6333e5df67ff4c4072bcd"},
-    {file = "dbus_fast-2.39.6-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux_2_5_x86_64.manylinux1_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d3f5a85ddf4b22eb9cc729afe9c564e8e5dde5e9a50b5dab502ac15952675e84"},
-    {file = "dbus_fast-2.39.6.tar.gz", hash = "sha256:fc3349ffea522d137d856f8967129dd4b87394c0bf8b8b1648295c5eb0a457fe"},
+    {file = "dbus_fast-2.43.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:047aa3358c47c6317a65716f9cbdfc6b8f95309df6ef93e4923e16083f610d62"},
+    {file = "dbus_fast-2.43.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:92447e68c316f2565d4961c3168aeb2939936acca20dc992121efd77966c1142"},
+    {file = "dbus_fast-2.43.0-cp310-cp310-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:c361a721533f7b0ba82dc3d6193bcd21638c85d4500f1808f4ea3a8d91628d1d"},
+    {file = "dbus_fast-2.43.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:88cf0549696371e3829d2bee600d834bd9795a822b2629ad7295f6f4e1c266c3"},
+    {file = "dbus_fast-2.43.0-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:754f4f3ce0fb3c1aec554b693c2724f1ab15f31129429a4392a85879360d8abf"},
+    {file = "dbus_fast-2.43.0-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:5a96a7ffedf1ae3a56c82167533052833a4dd858aa6a060e0d9ee9bbc79cb6d5"},
+    {file = "dbus_fast-2.43.0-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:06c015378d5f4f054be56e6e421575892e772962ac32974a254659a231880cd3"},
+    {file = "dbus_fast-2.43.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:7d21f3fb26e98da422c00903b620dbf9f8d9082aada278f7b23fd95c1d065034"},
+    {file = "dbus_fast-2.43.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:faf2d0e65af2a17cf12e2a6a5e17bf12012e557f83a8c3ab532935ea7d7230c1"},
+    {file = "dbus_fast-2.43.0-cp311-cp311-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:090355ef6da1710732dbbbe885ec8a36f4e37ab45eb110d77b92cc5d6e4a5682"},
+    {file = "dbus_fast-2.43.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:753e2c7c0b15bf5159936c4bd9e70f15219b7d518f1e963af7caa7f84e495596"},
+    {file = "dbus_fast-2.43.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:e9b48153edac93a67ed3013eb5acb03d9dd52be74b9ccde1421bf86d52f88266"},
+    {file = "dbus_fast-2.43.0-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:629002510e62af1956129e6d69a60a8fb812394e754a69bab90e254d6a03eabb"},
+    {file = "dbus_fast-2.43.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:b0d32c2e8fe0ca8927b91683c9423d8cfdaf2c45d29027a4b24ea0e94a80c9b9"},
+    {file = "dbus_fast-2.43.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:1f0e20fb3d908cfc19ed0c8472d5323262a5b0fd96898c6eec5518638c19e8fe"},
+    {file = "dbus_fast-2.43.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e94023f7492ac9c0cd401291f9391308817163a32ab20f7962f67be1744d4347"},
+    {file = "dbus_fast-2.43.0-cp312-cp312-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:723573933212e281e7667bfa8944f4e983734bf0aa9340f23f904466646ee4d7"},
+    {file = "dbus_fast-2.43.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:40473392d29b9c580c2e16471aa868c4477fc5b7c9af88bf08f66b36cf6b3087"},
+    {file = "dbus_fast-2.43.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:e506846fc8b84588e37f734c7cda3f81a3d83a0ed93974391929fa1510ef3bdf"},
+    {file = "dbus_fast-2.43.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:06818da2bdd855120fa0ec65411182ab774f034dfad84ebfa26c576bbb570f44"},
+    {file = "dbus_fast-2.43.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:b41abbd5b9c289a5251ef282664c122f420f210199d36e1a3a536e3b814bb551"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:f757d9a1e3b141f932daea37c657a61f83e08f2204267dd5194d446713038d27"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:66608a91fa4118fea8afcf6836fc358d54dfce7fe37c740a9092adc3069490f1"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:b0b54bfd87f42c034c998f5b56806a30c9f5f6ea999ba575438cd48be321bb5c"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:067d63faf2714d129629b1e705dae89bcf1c8cb9ac5e741882d44b8323975326"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-manylinux_2_36_x86_64.whl", hash = "sha256:c184f2cc52994845d0a88011985a12562a1433332f79270246c7dc667a323024"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:eddff9abbc50be47f7b618577a2d3f475fcf7ad96e8dc3549cee29c985ec018e"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:a5533f40df3d2dd111eba9752d7d7b716bad214a4ff443fd7d5ab1bd61cea18b"},
+    {file = "dbus_fast-2.43.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:09e836c7453cf0dab8f6ae118c17ef431d8cfc8fc88bd2e725c1f1d4c5e85e6b"},
+    {file = "dbus_fast-2.43.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:1996a1081ddc58072ef6c5435a401fe2733dbe115296001a6adce0cd868bb479"},
+    {file = "dbus_fast-2.43.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:00be0f9a6edf04dc89c4ef774cff191986cb9749f9316efc08e6d8f725eeb97a"},
+    {file = "dbus_fast-2.43.0-cp39-cp39-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:451fb0913f52bf59ca091d8ed5d0dbc62fe9a1d8e78102143cf29c21b922b72f"},
+    {file = "dbus_fast-2.43.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a6c81bcea572fcd672c4d95c2bc18ec932b41166365bb7463fa9da3b57d22aa2"},
+    {file = "dbus_fast-2.43.0-cp39-cp39-musllinux_1_2_aarch64.whl", hash = "sha256:0f9253254789b6186f7b5f1bba49bb8ebdc8274cfec6ee63e271aba1390cc15f"},
+    {file = "dbus_fast-2.43.0-cp39-cp39-musllinux_1_2_i686.whl", hash = "sha256:ce8f2e641c4e6b521e3c6820e155952b35a4eeb0c483d7ce6f1cb22761483ee0"},
+    {file = "dbus_fast-2.43.0-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:f3c98520cabb443b2cf53f3a11fea1f7b92dcca62d628254effb46760bb420a2"},
+    {file = "dbus_fast-2.43.0-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:9bccb077f3640ee4ed2ed7aa62811730fda0bfd25b27078d0715697f54ee6122"},
+    {file = "dbus_fast-2.43.0-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:16338110aeb588684baa662dcf4eaf904a493a2417498b188f9080abc36c481e"},
+    {file = "dbus_fast-2.43.0-pp310-pypy310_pp73-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:92f5117d8910d82804226088cbbce68d3180926421b4dfb7478dccac14329706"},
+    {file = "dbus_fast-2.43.0-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux_2_5_x86_64.manylinux1_x86_64.manylinux2014_x86_64.whl", hash = "sha256:97d88ffb7f7bb3db79758d4b0fd80afb608ae113b8d12b7045d3b573118e2a5f"},
+    {file = "dbus_fast-2.43.0-pp39-pypy39_pp73-macosx_11_0_arm64.whl", hash = "sha256:467da011482b6b6e3af3c34974dd99e28a025ea93b3cc050c2e91a2e8470de5a"},
+    {file = "dbus_fast-2.43.0-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9f71c50d9e108ce5f881356f20be47595bc2dcf44335902d21eeb4162e6f1dd9"},
+    {file = "dbus_fast-2.43.0-pp39-pypy39_pp73-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:9683d2db4718f743553302f996b1df978d07eead38b8a7c18a19d704bf1a82de"},
+    {file = "dbus_fast-2.43.0-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux_2_5_x86_64.manylinux1_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8ce35380a6f3db2406b31b0744a262a5f348124a586df8cc2f8417286ab1984d"},
+    {file = "dbus_fast-2.43.0.tar.gz", hash = "sha256:c4968dd6e8c15c27a307a0b3c90347ab1eb7a0787d189e65896d404eb1c0728f"},
 ]
 
 [[package]]
@@ -1401,50 +1401,50 @@ files = [
 
 [[package]]
 name = "habluetooth"
-version = "3.32.0"
+version = "3.38.0"
 description = "High availability Bluetooth"
 optional = false
 python-versions = ">=3.11"
 groups = ["main", "dev"]
 files = [
-    {file = "habluetooth-3.32.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:1f559beaf7551d2259126beb3d7898209d0732a2dd904eba4c0f5e1570c1c796"},
-    {file = "habluetooth-3.32.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:de53da1c8a95c5a4bfc0052618db9ebd90443b2e7973ed3370c2dd6b2f5ed999"},
-    {file = "habluetooth-3.32.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d4f285d12ef4cbaebd2afd80612ec8402096a05c00d300e5c8cad761d0626618"},
-    {file = "habluetooth-3.32.0-cp311-cp311-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:0f486c7eb5045f2217df2220c6b1907d3a952dc25cebdc2d2fb9a8cd42f80188"},
-    {file = "habluetooth-3.32.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:685f2867608b0a193143ff25aa7235e724e9ca3c1f132518395912124a7a6bdd"},
-    {file = "habluetooth-3.32.0-cp311-cp311-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d4d9c8a9945349dbcd540ccd25b4a2e17e4245d255bc698ca5819feaf0583b11"},
-    {file = "habluetooth-3.32.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:07d2d3efd642b399411f5fdea1f98c16ccd2e5bfc5e32fba24e5292712c3cf6a"},
-    {file = "habluetooth-3.32.0-cp311-cp311-musllinux_1_2_armv7l.whl", hash = "sha256:70438d9ea030375fc7b0ce4bd5f4eeaf4e175f275f854b5f42a3093a60204df6"},
-    {file = "habluetooth-3.32.0-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:0b198c0abb2fd98b893ccfd9c9109f118fc1434f512cd5ccccc1467014f8cd87"},
-    {file = "habluetooth-3.32.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:e48864079b5fbb2a3874bdb2f19bceef498f7b193765febd8b24b4ff49c800d5"},
-    {file = "habluetooth-3.32.0-cp311-cp311-win32.whl", hash = "sha256:eca4bea744b0bcdb6a26e3b15117b00c3c37206cf4cfce3fcce5cc6b7d26cffc"},
-    {file = "habluetooth-3.32.0-cp311-cp311-win_amd64.whl", hash = "sha256:d39f9246c66de8a3717cbb3418b60d78f47d613eb64971a778a5bb5a46009d21"},
-    {file = "habluetooth-3.32.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:c24bd6a3e5381d61ba4f3eddefc39561de73b20d7a9778b99e99fedd74e589f2"},
-    {file = "habluetooth-3.32.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:aa87fef2a93a602191db4cf944094d223dcdcfbf819aa99d0344ff9677b5a4fc"},
-    {file = "habluetooth-3.32.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:97ff3b6d0e164c8055115e9f15c848298d33f0280c7053bbb3ead49920005ab2"},
-    {file = "habluetooth-3.32.0-cp312-cp312-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:9c345dfac81bb0e00053b67e9cd646500f193548c1be5ca536a88ef8430a4b37"},
-    {file = "habluetooth-3.32.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f273f77e7ad8216539802761e1ebea4cd33ed69842295e4ebf3157b785563937"},
-    {file = "habluetooth-3.32.0-cp312-cp312-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:1b5d9c9b7059e69a87da0c5f04255970ce0ddf3bf2431a13e5fd15cb1c73690c"},
-    {file = "habluetooth-3.32.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:daeeae24b25defc5a141ce36d3d6874a2966a8eaea03be93bf3c44e689747dd0"},
-    {file = "habluetooth-3.32.0-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:36992e3472a46ea32b79f91ef96b8a37f3d65de7c4d34a24f23ef4a802a64db2"},
-    {file = "habluetooth-3.32.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:999eb15e49274641b21af97a3a054e253674d626ffb36f58c9db86200b2d6f1e"},
-    {file = "habluetooth-3.32.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:359c60e7cefe38b0be53eb7171707da6c2c4af6336686fd2b767323854dbdd5d"},
-    {file = "habluetooth-3.32.0-cp312-cp312-win32.whl", hash = "sha256:7e27d16bc89e62ae0626a15a677f803ae50cbff15f9ab056f3d0e1a146d4b247"},
-    {file = "habluetooth-3.32.0-cp312-cp312-win_amd64.whl", hash = "sha256:4fd8d6f14ccb9018804d93642fa4dc6913a9f1a5071234b8daca68e9bf77ddb8"},
-    {file = "habluetooth-3.32.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:48b8dab46fcf7250b47846e510149a0c2de471cb2092a097a93862f08be1707b"},
-    {file = "habluetooth-3.32.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:0d4e3fe28e9311f734e48b81794353dd99794b354aca656bbf806ad11e8b8ad7"},
-    {file = "habluetooth-3.32.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b3285646b98442d8ddd1f60660b5840d99031bc3a6a3a19ee8040f7563733f20"},
-    {file = "habluetooth-3.32.0-cp313-cp313-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:91599c0be2fcea514531f426553835d8e6886e8df72d2268d4f72ba928c28d6c"},
-    {file = "habluetooth-3.32.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0c11c982f793aaf749727651fe148c818cc0cf129789c36c34b8f6bf4c73eb22"},
-    {file = "habluetooth-3.32.0-cp313-cp313-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:c8f71ca0ee3804b23f25a714c3d27e747bd62b2c472bb36701e44168b336d5a4"},
-    {file = "habluetooth-3.32.0-cp313-cp313-manylinux_2_36_x86_64.whl", hash = "sha256:f4e1357acc20ccaf77465739c4e3d452f1eaccf873e117ec3e60734f844fd456"},
-    {file = "habluetooth-3.32.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:9665fbda98bac867bc7f410d7f5296e5cfcaa9715eb83d55963933bd1e17fa0a"},
-    {file = "habluetooth-3.32.0-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:7aaac1e7f16f3ed68f9e58b93f6cbd6dd5f2da10f3a0158fb6635ff1880b2bc6"},
-    {file = "habluetooth-3.32.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:3d4238a4108e519991a17b51494c3a529c518c7f0d8a710d6a209336cb5dbfbc"},
-    {file = "habluetooth-3.32.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:b6d3a671ca1218149976a452ba08acd660460fd7f70d862fca3f9df89283a2cc"},
-    {file = "habluetooth-3.32.0-cp313-cp313-win32.whl", hash = "sha256:effc2d1c70fed599c28c85333f9ab8340a4b57c19497cd679436b3e77f185ce6"},
-    {file = "habluetooth-3.32.0-cp313-cp313-win_amd64.whl", hash = "sha256:0e3e4c21bff53920ff4aeeba24f72ccfe3dc64f9797aac28ffedecf6f940dd8f"},
-    {file = "habluetooth-3.32.0.tar.gz", hash = "sha256:142eeadacae3e182c655f2712e9fc2079bf87cd20fc62be82c3596dfd55dda7f"},
+    {file = "habluetooth-3.38.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:1881c146d5b84c5a1f07fe0113281166d35be19ab1cc08ce3f9ace19af165ef3"},
+    {file = "habluetooth-3.38.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:07561287ea6afab873678c60b5d592b515add1ddee0d9a7564f97e55e3778d50"},
+    {file = "habluetooth-3.38.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:eb1909b53d5906fca6a6f88e08f27430d565f5abacdcd983882133e4fca2840e"},
+    {file = "habluetooth-3.38.0-cp311-cp311-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:9d406429a193ace0d8d5ab0e6d322aa51b793455f2d03a26ba738ee47b710c55"},
+    {file = "habluetooth-3.38.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2401d83a0c6dee999d514722b9373a733525abec148a90be6a20bd0e56cbfaf8"},
+    {file = "habluetooth-3.38.0-cp311-cp311-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:810dcdf4cf2cad298d9200c5aaa0332b42719230de91d810ce82f98aed58ceea"},
+    {file = "habluetooth-3.38.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:0ec7afd0ea2a5af6cccb87834836dfcf55354c80e13613d3ae29e126123f09ac"},
+    {file = "habluetooth-3.38.0-cp311-cp311-musllinux_1_2_armv7l.whl", hash = "sha256:3490ccc601dfb717318b2d1251a289e8578bc9e42df4534e57e7c2d08c3947e5"},
+    {file = "habluetooth-3.38.0-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:9376f819578edcf44a4d352c9ace7e7f42ab7560b13024442dd07f2abb887016"},
+    {file = "habluetooth-3.38.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:b169edba40de9d4b29178320409da9137c2d348b7e89df7eae4f37aff32b92e7"},
+    {file = "habluetooth-3.38.0-cp311-cp311-win32.whl", hash = "sha256:b852744e6303f25eeec4673d4e9ab62e9abfa2e945d35388aa28b45eb9702b10"},
+    {file = "habluetooth-3.38.0-cp311-cp311-win_amd64.whl", hash = "sha256:a38824ed6e92409ace2de3e345f5e78b38bc853a5ee5af986ba30ed80441adc2"},
+    {file = "habluetooth-3.38.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:1545bfd35a1286dff9737cd0273b2db0d2cdaa2794d3e13de39822204fd6783f"},
+    {file = "habluetooth-3.38.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:338405eff410edfd2053014191a9389401e7d8db3da74f962a83d07ce0202617"},
+    {file = "habluetooth-3.38.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a01ac6c678a596771ec2a626ca0e1bbc84f1b92d449a56dbdbd1c5dfd1affba6"},
+    {file = "habluetooth-3.38.0-cp312-cp312-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:6b34afda7868e9af8150271de129a66d4fdeadbf654c8c99ab8465ed574e436f"},
+    {file = "habluetooth-3.38.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a2c122801406546764e23e26d211940cfaeec5abddbc7276b4bad264211797b2"},
+    {file = "habluetooth-3.38.0-cp312-cp312-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:f18ed561187e1ad4789364cb45d8de196b8b7701e45a2817db85ef304dcbb2d6"},
+    {file = "habluetooth-3.38.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:d08b029a99eb97025eb79c6c91202315d48e72fe65b2066cfe4079ece0527248"},
+    {file = "habluetooth-3.38.0-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:710da6a6493cfeb154b70d6316abe5b200ad030cd458c71ffd58fba02e5117b1"},
+    {file = "habluetooth-3.38.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:4c2fdfcb075ef1b548f1af1b13a471c7d3a782696d645147571196062599e77c"},
+    {file = "habluetooth-3.38.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:e1061f6bdce4d80e884065dbf0a963c2dd3311d5c28d5c30f3ae99c126c2aa1e"},
+    {file = "habluetooth-3.38.0-cp312-cp312-win32.whl", hash = "sha256:cdf4c70adb903f233735bb64f3fffe00809e209489178ac26065eb403e0cf299"},
+    {file = "habluetooth-3.38.0-cp312-cp312-win_amd64.whl", hash = "sha256:e1d8feb52a26ab5746422ff7474afd20f0908676ec5d3c117a4e000a1a6f624e"},
+    {file = "habluetooth-3.38.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:2fad8f120aa7ea60bb0cc5813e9bca7cf71aa73bad0c4963329ce6061a586a3a"},
+    {file = "habluetooth-3.38.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:be3d47624e24f041f51f2f27a7c12e4c668d10babe4e5e405fa95e99cd7643b4"},
+    {file = "habluetooth-3.38.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:75bab83183932cf72ba1022a59f89a7ab38ff1eb89976a3ad69632f2152b31ab"},
+    {file = "habluetooth-3.38.0-cp313-cp313-manylinux_2_17_i686.manylinux_2_5_i686.manylinux1_i686.manylinux2014_i686.whl", hash = "sha256:7bb74e4806282560fd59d069824af5665656daed64bc7b732387d523f44b0c4e"},
+    {file = "habluetooth-3.38.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7b87c68c439999b1f47a686334633c75d5885cecb6863ef824331d1ba29c684c"},
+    {file = "habluetooth-3.38.0-cp313-cp313-manylinux_2_31_armv7l.manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:677137a00cbb1fad58f9201fdad16b6d16b9fc9f11556db2ed6fe3013e717656"},
+    {file = "habluetooth-3.38.0-cp313-cp313-manylinux_2_36_x86_64.whl", hash = "sha256:6a382b10467262326f3944c0822d61d3ebef8f4587fd256cf9567f8b553225f5"},
+    {file = "habluetooth-3.38.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:8c53ccec8a747d5488f52eb7b415482d584a1025b4c228f410b04fd8da535db7"},
+    {file = "habluetooth-3.38.0-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:a8919c1b84969ea906e586e68c2e36880be652263a16f343ccaf16ba6b47d4d6"},
+    {file = "habluetooth-3.38.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:3f9ad0b37c3b05c67621e7e0321d40628f1955c3ada0dbdb46180d0b60e1855e"},
+    {file = "habluetooth-3.38.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:2c1aad5ad0e04504a710b3d75be1ee49d9629d42dc7e454830699245c1872a1f"},
+    {file = "habluetooth-3.38.0-cp313-cp313-win32.whl", hash = "sha256:4f4adfd4ea2acb669f6cfef7dbccb4ea4ed0892850c0d312de9197f3dc559109"},
+    {file = "habluetooth-3.38.0-cp313-cp313-win_amd64.whl", hash = "sha256:4881c9e0c497441a8ac392c9b6236ae1ac01af94ffbcb038436b8157ec43a571"},
+    {file = "habluetooth-3.38.0.tar.gz", hash = "sha256:1a191bf48373edfb8e476acd6a79f756a1de3aafc78210a96271e9e32f6b5131"},
 ]
 
 [package.dependencies]
@@ -2460,20 +2460,20 @@ xmp = ["defusedxml"]
 
 [[package]]
 name = "platformdirs"
-version = "4.3.6"
+version = "4.3.7"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "platformdirs-4.3.6-py3-none-any.whl", hash = "sha256:73e575e1408ab8103900836b97580d5307456908a03e92031bab39e4554cc3fb"},
-    {file = "platformdirs-4.3.6.tar.gz", hash = "sha256:357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907"},
+    {file = "platformdirs-4.3.7-py3-none-any.whl", hash = "sha256:a03875334331946f13c549dbd8f4bac7a13a50a895a0eb1e8c6a8ace80d40a94"},
+    {file = "platformdirs-4.3.7.tar.gz", hash = "sha256:eb437d586b6a0986388f0d6f74aa0cde27b48d0e3d66843640bfb6bdcdb6e351"},
 ]
 
 [package.extras]
-docs = ["furo (>=2024.8.6)", "proselint (>=0.14)", "sphinx (>=8.0.2)", "sphinx-autodoc-typehints (>=2.4)"]
-test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.3.2)", "pytest-cov (>=5)", "pytest-mock (>=3.14)"]
-type = ["mypy (>=1.11.2)"]
+docs = ["furo (>=2024.8.6)", "proselint (>=0.14)", "sphinx (>=8.1.3)", "sphinx-autodoc-typehints (>=3)"]
+test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.3.4)", "pytest-cov (>=6)", "pytest-mock (>=3.14)"]
+type = ["mypy (>=1.14.1)"]
 
 [[package]]
 name = "pre-commit"
@@ -3230,19 +3230,19 @@ cryptography = "*"
 
 [[package]]
 name = "setuptools"
-version = "76.1.0"
+version = "77.0.3"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "setuptools-76.1.0-py3-none-any.whl", hash = "sha256:34750dcb17d046929f545dec9b8349fe42bf4ba13ddffee78428aec422dbfb73"},
-    {file = "setuptools-76.1.0.tar.gz", hash = "sha256:4959b9ad482ada2ba2320c8f1a8d8481d4d8d668908a7a1b84d987375cd7f5bd"},
+    {file = "setuptools-77.0.3-py3-none-any.whl", hash = "sha256:67122e78221da5cf550ddd04cf8742c8fe12094483749a792d56cd669d6cf58c"},
+    {file = "setuptools-77.0.3.tar.gz", hash = "sha256:583b361c8da8de57403743e756609670de6fb2345920e36dc5c2d914c319c945"},
 ]
 
 [package.extras]
 check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\"", "ruff (>=0.8.0) ; sys_platform != \"cygwin\""]
-core = ["importlib_metadata (>=6) ; python_version < \"3.10\"", "jaraco.collections", "jaraco.functools (>=4)", "jaraco.text (>=3.7)", "more_itertools", "more_itertools (>=8.8)", "packaging", "packaging (>=24.2)", "platformdirs (>=4.2.2)", "tomli (>=2.0.1) ; python_version < \"3.11\"", "wheel (>=0.43.0)"]
+core = ["importlib_metadata (>=6) ; python_version < \"3.10\"", "jaraco.functools (>=4)", "jaraco.text (>=3.7)", "more_itertools", "more_itertools (>=8.8)", "packaging (>=24.2)", "platformdirs (>=4.2.2)", "tomli (>=2.0.1) ; python_version < \"3.11\"", "wheel (>=0.43.0)"]
 cover = ["pytest-cov"]
 doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "pyproject-hooks (!=1.1)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-inline-tabs", "sphinx-lint", "sphinx-notfound-page (>=1,<2)", "sphinx-reredirects", "sphinxcontrib-towncrier", "towncrier (<24.7)"]
 enabler = ["pytest-enabler (>=2.2)"]
@@ -3469,14 +3469,14 @@ files = [
 
 [[package]]
 name = "tzdata"
-version = "2025.1"
+version = "2025.2"
 description = "Provider of IANA time zone data"
 optional = false
 python-versions = ">=2"
 groups = ["main", "dev"]
 files = [
-    {file = "tzdata-2025.1-py2.py3-none-any.whl", hash = "sha256:7e127113816800496f027041c570f50bcd464a020098a3b6b199517772303639"},
-    {file = "tzdata-2025.1.tar.gz", hash = "sha256:24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694"},
+    {file = "tzdata-2025.2-py2.py3-none-any.whl", hash = "sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8"},
+    {file = "tzdata-2025.2.tar.gz", hash = "sha256:b60a638fcc0daffadf82fe0f57e53d06bdec2f36c4df66280ae79bce6bd6f2b9"},
 ]
 
 [[package]]
