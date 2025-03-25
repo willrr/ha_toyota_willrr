@@ -8,7 +8,7 @@ PLATFORMS = [Platform.BINARY_SENSOR, Platform.DEVICE_TRACKER, Platform.SENSOR]
 # INTEGRATION ATTRIBUTES
 DOMAIN = "toyota"
 NAME = "Toyota Connected Services"
-ISSUES_URL = "https://github.com/DurgNomis-drol/ha_toyota/issues"
+ISSUES_URL = "https://github.com/pytoyoda/ha_toyota/issues"
 
 # CONF
 CONF_BRAND_MAPPING = {"T": "Toyota", "L": "Lexus"}
