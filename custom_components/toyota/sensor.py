@@ -6,7 +6,6 @@ from __future__ import annotations
 
 import logging
 from collections.abc import Callable
-from dataclasses import dataclass
 from typing import Any, Literal, Optional, Union
 
 from homeassistant.components.sensor import (
@@ -36,19 +35,11 @@ from .utils import (
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
-class ToyotaSensorEntityDescriptionMixin:
-    """Mixin for required keys."""
+class ToyotaSensorEntityDescription(SensorEntityDescription, frozen_or_thawed=True):
+    """Describes a Toyota sensor entity."""
 
     value_fn: Callable[[Vehicle], StateType]
     attributes_fn: Callable[[Vehicle], Optional[dict[str, Any]]]
-
-
-@dataclass
-class ToyotaSensorEntityDescription(
-    SensorEntityDescription, ToyotaSensorEntityDescriptionMixin
-):
-    """Describes a Toyota sensor entity."""
 
 
 VIN_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
@@ -147,18 +138,12 @@ TOTAL_RANGE_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
 )
 
 
-@dataclass
-class ToyotaStatisticsSensorEntityDescriptionMixin:
-    """Mixin for required keys."""
-
-    period: Literal["day", "week", "month", "year"]
-
-
-@dataclass
 class ToyotaStatisticsSensorEntityDescription(
-    SensorEntityDescription, ToyotaStatisticsSensorEntityDescriptionMixin
+    SensorEntityDescription, frozen_or_thawed=True
 ):
     """Describes a Toyota statistics sensor entity."""
+
+    period: Literal["day", "week", "month", "year"]
 
 
 STATISTICS_ENTITY_DESCRIPTIONS_DAILY = ToyotaStatisticsSensorEntityDescription(
@@ -444,13 +429,14 @@ class ToyotaStatisticsSensor(ToyotaBaseEntity, SensorEntity):
     def native_value(self) -> StateType:
         """Return the state of the sensor."""
         data = self.statistics[self.period]
-        return round(data.distance, 1) if data else None
+        return round(data.distance, 1) if data and data.distance else None
 
     @property
     def extra_state_attributes(self):
         """Return the state attributes."""
         data = self.statistics[self.period]
-        if data is not None:
-            return format_statistics_attributes(data, self.vehicle._vehicle_info)
-        else:
-            return None
+        return (
+            format_statistics_attributes(data, self.vehicle._vehicle_info)
+            if data
+            else None
+        )
