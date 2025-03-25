@@ -1,5 +1,7 @@
 """Sensor platform for Toyota integration."""
 
+# pylint: disable=E1123, W0212
+
 from __future__ import annotations
 
 import logging
@@ -102,7 +104,7 @@ BATTERY_LEVEL_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
     device_class=SensorDeviceClass.BATTERY,
     state_class=SensorStateClass.MEASUREMENT,
     value_fn=lambda vehicle: None
-    if vehicle.dashboard is None or len(str(int(vehicle.dashboard.battery_level))) > 3
+    if vehicle.dashboard is None
     else round_number(vehicle.dashboard.battery_level),
     suggested_display_precision=0,
     attributes_fn=lambda vehicle: None,  # noqa : ARG005
@@ -224,7 +226,11 @@ async def async_setup_entry(
                 None,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.telemetry_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "telemetry_capable",
+                    False,
+                ),
                 ODOMETER_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -235,14 +241,22 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.fuel_level_available,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "fuel_level_available",
+                    False,
+                ),
                 FUEL_LEVEL_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 PERCENTAGE,
                 None,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.fuel_range_available,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "fuel_range_available",
+                    False,
+                ),
                 FUEL_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -253,14 +267,22 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                ),
                 BATTERY_LEVEL_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 PERCENTAGE,
-                PERCENTAGE,
+                None,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                ),
                 BATTERY_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -271,7 +293,11 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                ),
                 BATTERY_RANGE_AC_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -282,8 +308,16 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable
-                and vehicle._vehicle_info.extended_capabilities.fuel_range_available,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                )
+                and getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "fuel_range_available",
+                    False,
+                ),
                 TOTAL_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
