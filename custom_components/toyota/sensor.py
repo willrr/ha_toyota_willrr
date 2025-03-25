@@ -1,6 +1,6 @@
 """Sensor platform for Toyota integration."""
 
-# pylint: disable=E1123, W0212
+# pylint: disable=W0212, W0511
 
 from __future__ import annotations
 
