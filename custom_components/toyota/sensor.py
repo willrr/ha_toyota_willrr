@@ -1,10 +1,11 @@
 """Sensor platform for Toyota integration."""
 
+# pylint: disable=W0212, W0511
+
 from __future__ import annotations
 
 import logging
 from collections.abc import Callable
-from dataclasses import dataclass
 from typing import Any, Literal, Optional, Union
 
 from homeassistant.components.sensor import (
@@ -34,19 +35,11 @@ from .utils import (
 _LOGGER = logging.getLogger(__name__)
 
 
-@dataclass
-class ToyotaSensorEntityDescriptionMixin:
-    """Mixin for required keys."""
+class ToyotaSensorEntityDescription(SensorEntityDescription, frozen_or_thawed=True):
+    """Describes a Toyota sensor entity."""
 
     value_fn: Callable[[Vehicle], StateType]
     attributes_fn: Callable[[Vehicle], Optional[dict[str, Any]]]
-
-
-@dataclass
-class ToyotaSensorEntityDescription(
-    SensorEntityDescription, ToyotaSensorEntityDescriptionMixin
-):
-    """Describes a Toyota sensor entity."""
 
 
 VIN_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
@@ -145,18 +138,12 @@ TOTAL_RANGE_ENTITY_DESCRIPTION = ToyotaSensorEntityDescription(
 )
 
 
-@dataclass
-class ToyotaStatisticsSensorEntityDescriptionMixin:
-    """Mixin for required keys."""
-
-    period: Literal["day", "week", "month", "year"]
-
-
-@dataclass
 class ToyotaStatisticsSensorEntityDescription(
-    SensorEntityDescription, ToyotaStatisticsSensorEntityDescriptionMixin
+    SensorEntityDescription, frozen_or_thawed=True
 ):
     """Describes a Toyota statistics sensor entity."""
+
+    period: Literal["day", "week", "month", "year"]
 
 
 STATISTICS_ENTITY_DESCRIPTIONS_DAILY = ToyotaStatisticsSensorEntityDescription(
@@ -224,7 +211,11 @@ async def async_setup_entry(
                 None,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.telemetry_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "telemetry_capable",
+                    False,
+                ),
                 ODOMETER_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -235,14 +226,22 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.fuel_level_available,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "fuel_level_available",
+                    False,
+                ),
                 FUEL_LEVEL_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 PERCENTAGE,
                 None,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.fuel_range_available,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "fuel_range_available",
+                    False,
+                ),
                 FUEL_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -253,14 +252,22 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                ),
                 BATTERY_LEVEL_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 PERCENTAGE,
-                PERCENTAGE,
+                None,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                ),
                 BATTERY_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -271,7 +278,11 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                ),
                 BATTERY_RANGE_AC_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -282,8 +293,16 @@ async def async_setup_entry(
                 else UnitOfLength.MILES,
             ),
             (
-                vehicle._vehicle_info.extended_capabilities.econnect_vehicle_status_capable
-                and vehicle._vehicle_info.extended_capabilities.fuel_range_available,
+                getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "econnect_vehicle_status_capable",
+                    False,
+                )
+                and getattr(
+                    getattr(vehicle._vehicle_info, "extended_capabilities", False),
+                    "fuel_range_available",
+                    False,
+                ),
                 TOTAL_RANGE_ENTITY_DESCRIPTION,
                 ToyotaSensor,
                 UnitOfLength.KILOMETERS
@@ -410,13 +429,14 @@ class ToyotaStatisticsSensor(ToyotaBaseEntity, SensorEntity):
     def native_value(self) -> StateType:
         """Return the state of the sensor."""
         data = self.statistics[self.period]
-        return round(data.distance, 1) if data else None
+        return round(data.distance, 1) if data and data.distance else None
 
     @property
     def extra_state_attributes(self):
         """Return the state attributes."""
         data = self.statistics[self.period]
-        if data is not None:
-            return format_statistics_attributes(data, self.vehicle._vehicle_info)
-        else:
-            return None
+        return (
+            format_statistics_attributes(data, self.vehicle._vehicle_info)
+            if data
+            else None
+        )
