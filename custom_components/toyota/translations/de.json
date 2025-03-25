@@ -86,16 +86,16 @@
         "name": "Enteisungsanlage hinten"
       },
       "driverseat_window": {
-        "name": "Fenster Fahrertür"
+        "name": "Seitenscheibe Fahrerseite"
       },
       "passengerseat_window": {
-        "name": "Fenster Beifahrertür"
+        "name": "Seitenscheibe Beifahrerseite"
       },
       "leftrearseat_window": {
-        "name": "Fenster linke Rücksitztür"
+        "name": "Seitenscheibe Fahrerseite hinten"
       },
       "rightrearseat_window": {
-        "name": "Fenster rechte Rücksitztür"
+        "name": "Seitenscheibe Beifahrerseite hinten"
       },
       "driverseat_door": {
         "name": "Fahrertür"
@@ -110,22 +110,22 @@
         "name": "Verriegelung Beifahrertür"
       },
       "leftrearseat_door": {
-        "name": "Linke Rücksitztür"
+        "name": "Fahrertür hinten"
       },
       "leftrearseat_lock": {
-        "name": "Verriegelung linke Rücksitztür"
+        "name": "Verriegelung Fahrertür hinten"
       },
       "rightrearseat_door": {
-        "name": "Rechte Rücksitztür"
+        "name": "Beifahrertür hinten"
       },
       "rightrearseat_lock": {
-        "name": "Verriegelung rechte Rücksitztür"
+        "name": "Verriegelung Beifahrertür hinten"
       },
       "trunk_door": {
-        "name": "Kofferraumklappe"
+        "name": "Heckklappe"
       },
       "trunk_lock": {
-        "name": "Verriegelung Kofferraumklappe"
+        "name": "Verriegelung Heckklappe"
       },
       "hazardlights": {
         "name": "Warnleuchten"

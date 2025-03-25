@@ -1,8 +1,8 @@
-[![GitHub Workflow Status][workflow-shield]][workflow]
-[![GitHub Release][releases-shield]][releases]
-[![hacs][hacsbadge]][hacs]
-[![GitHub Activity][commits-shield]][commits]
-[![Installs][installs-shield]][installs]
+[![License](https://img.shields.io/github/license/pytoyoda/ha_toyota)](LICENSE)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
+![Version](https://img.shields.io/github/v/release/pytoyoda/ha_toyota)
+![Downloads](https://img.shields.io/github/downloads/pytoyoda/ha_toyota/total)
+[![CodeQL](https://github.com/pytoyoda/ha_toyota/actions/workflows/codeql.yml/badge.svg)](https://github.com/pytoyoda/ha_toyota/actions/workflows/codeql.yml)
 
 <p align="center">
     <img src="https://brands.home-assistant.io/_/toyota/icon@2x.png" alt="logo" height="200">
@@ -84,7 +84,7 @@ Due to this, this integration will list sensors as unavailable when no data is a
 
 **Disclaimer: Attributes available depends on your car model and year.**
 
-All values will show `None` if no data is available for the periode.
+All values will show `None` if no data is available for the period.
 
 | Attribute               | Description                                                                     |
 | ----------------------- | ------------------------------------------------------------------------------- |
@@ -173,14 +173,3 @@ By contributing, you agree that your contributions will be licensed under its MI
 ## Credits
 
 Under the hood this integration uses the [pytoyoda](https://github.com/pytoyoda/pytoyoda) python package.
-
-[hacs]: https://hacs.xyz
-[hacsbadge]: https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/pytoyoda/ha_toyota.svg?style=for-the-badge
-[releases]: https://github.com/pytoyoda/ha_toyota/releases
-[workflow-shield]: https://img.shields.io/github/actions/workflow/status/pytoyoda/ha_toyota/linting.yml?branch=main&style=for-the-badge
-[workflow]: https://github.com/pytoyoda/ha_toyota/actions
-[installs-shield]: https://img.shields.io/endpoint?style=for-the-badge&url=https%3A%2F%2Ftoyota-installs-for-shield-io-b910bxm1lt58.runkit.sh%2F
-[installs]: https://analytics.home-assistant.io/custom_integrations.json
-[commits-shield]: https://img.shields.io/github/commit-activity/y/pytoyoda/ha_toyota.svg?style=for-the-badge
-[commits]: https://github.com/pytoyoda/ha_toyota/commits/main
